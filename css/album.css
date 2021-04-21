@@ -17,12 +17,8 @@ footer p {
   margin-bottom: .25rem;
 }
 
-footer i {
-  font-size: 1.5rem;
-}
-
-header i {
-  font-size: 1.5rem;
+i {
+  font-size: 1.75rem;
 }
 
 .my-icon {
