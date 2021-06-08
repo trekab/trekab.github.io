@@ -25,14 +25,6 @@ i {
   height: 1.35rem;
 }
 
-.profile-pic {
-  background-image: url(../img/trekab.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  width: 12rem;
-  height: 12rem;
-}
-
 .welcome-msg {
   font-size: 1.85rem;
 }
