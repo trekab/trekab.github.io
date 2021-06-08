@@ -21,6 +21,10 @@ i {
   font-size: 1.75rem;
 }
 
+.card i {
+  font-size: 1.25rem;
+} 
+
 .my-icon {
   height: 1.35rem;
 }
@@ -43,5 +47,7 @@ body, .bg-gradient {
 }
 
 .bg-gradient:hover {
-  border: double 5px #292b2c;
+  border: double 5px #3d3f41;
+  transition: 1s;
+  border-radius: 8px;
 }
