@@ -21,6 +21,10 @@ i {
   font-size: 1.75rem;
 }
 
+.card i {
+  font-size: 1.25rem;
+} 
+
 .my-icon {
   height: 1.35rem;
 }
