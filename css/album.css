@@ -44,6 +44,7 @@ body, .bg-gradient {
 
 .bg-gradient {
   border: solid 6px transparent;
+  cursor: pointer;
 }
 
 .bg-gradient:hover {
