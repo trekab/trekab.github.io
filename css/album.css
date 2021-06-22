@@ -49,6 +49,6 @@ body, .bg-gradient {
 
 .bg-gradient:hover {
   border: double 6px #3d3f41;
-  transition: 1s;
+  transition: 0.5s;
   border-radius: 8px;
 }
