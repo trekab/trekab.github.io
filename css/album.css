@@ -43,12 +43,13 @@ body, .bg-gradient {
 }
 
 .bg-gradient {
-  border: solid 6px transparent;
+  border: solid 2px transparent;
   cursor: pointer;
 }
 
 .bg-gradient:hover {
-  border: double 6px #3d3f41;
+  border: solid 2px #3d3f41;
   transition: 0.5s;
-  border-radius: 8px;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
 }
