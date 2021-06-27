@@ -53,3 +53,11 @@ body, .bg-gradient {
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
 }
+
+.brand-logo {
+  color: #C1C8E4;
+}
+
+.brand-logo:hover {
+  color: whitesmoke;
+}
