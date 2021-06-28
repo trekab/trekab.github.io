@@ -54,10 +54,18 @@ body, .bg-gradient {
   border-bottom-right-radius: 0.8rem;
 }
 
-.brand-logo {
+.brand-logo, .navbar-content, .primary-color {
   color: #C1C8E4;
 }
 
 .brand-logo:hover {
   color: whitesmoke;
+}
+
+a.primary-color:hover {
+  color: #C1C8E4;
+}
+
+.border-bottom__custom {
+  border-bottom: 1px solid #C1C8E4;
 }
