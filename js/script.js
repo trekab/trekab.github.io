@@ -97,7 +97,12 @@ const buildCard = (project) => {
     const modalFooter = document.getElementsByClassName("modal-footer")[0];
     modalBody.innerHTML = "";
     modalFooter.innerHTML = "";
+    const projectImg = document.createElement('img');
+    projectImg.classList = "col-lg-6";
+    projectImg.setAttribute("src", project.screenShot);
+    projectImg.setAttribute("alt", project.title);
     const summary = document.createElement("p");
+    summary.classList = "col-lg-6";
     summary.textContent = project.summary;
     modalTitle.innerText = project.title;
 
@@ -121,8 +126,7 @@ const buildCard = (project) => {
     <span>Live Link</span>
   </a>`;
     detailsBtnsContainer.append(btnGroup);
-
-    modalBody.append(summary);
+    modalBody.append(projectImg, summary);
     modalFooter.append(detailsBtnsContainer);
   });
   cardButton.appendChild(btnContainer);
