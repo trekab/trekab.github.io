@@ -78,32 +78,62 @@ const buildCard = (project) => {
   const cardBody = document.createElement("div");
   cardBody.classList = "card-body";
 
-  const summary = document.createElement("p");
-  summary.classList = "card-text font-weight-bold";
-  summary.textContent = project.summary;
-
-  project.tech.forEach((element) => {
-    let techBadge = document.createElement("span");
-    techBadge.classList = "badge badge-dark m-1";
-    techBadge.textContent = element;
-    summary.appendChild(techBadge);
-  });
+  const title = document.createElement("h3");
+  title.classList = "card-text text-center mb-5";
+  title.textContent = project.title;
 
   const cardButton = document.createElement("div");
   cardButton.classList = "d-flex justify-content-end";
-  const btnContainer = document.createElement("div");
+  const btnContainer = document.createElement("button");
+  btnContainer.setAttribute("type", "button");
+  btnContainer.setAttribute("data-toggle", "modal");
+  btnContainer.setAttribute("data-target", "#projectModal");
   btnContainer.classList =
     "btn btn-sm btn-outline-dark font-weight-bold d-flex  align-items-center see-project-btn";
   btnContainer.innerHTML = `<span>See this project</span><i class="fa fa-arrow-right" aria-hidden="true"></i>`;
+  btnContainer.addEventListener("click", () => {
+    const modalTitle = document.getElementById("modalLabel");
+    const modalBody = document.getElementsByClassName("modal-body")[0];
+    const modalFooter = document.getElementsByClassName("modal-footer")[0];
+    modalBody.innerHTML = "";
+    modalFooter.innerHTML = "";
+    const summary = document.createElement("p");
+    summary.textContent = project.summary;
+    modalTitle.innerText = project.title;
+
+    project.tech.forEach((element) => {
+      let techBadge = document.createElement("span");
+      techBadge.classList = "badge badge-dark m-1";
+      techBadge.textContent = element;
+      summary.appendChild(techBadge);
+    });
+
+    const detailsBtnsContainer = document.createElement("div");
+    detailsBtnsContainer.classList = "d-flex justify-content-end";
+    const btnGroup = document.createElement("div");
+    btnGroup.classList = "btn-group";
+    btnGroup.innerHTML = `<a class="btn btn-sm btn-outline-dark font-weight-bold d-flex  align-items-center" href=${project.githubRepo} target="_blank" rel="noopener">
+    <i class="far fa-file-code"></i>
+    <span>GitHub</span>
+  </a>
+  <a class="btn btn-sm btn-outline-dark font-weight-bold d-flex  align-items-center" href=${project.liveLink} target="_blank" rel="noopener">
+    <i class="far fa-lightbulb"></i>
+    <span>Live Link</span>
+  </a>`;
+    detailsBtnsContainer.append(btnGroup);
+
+    modalBody.append(summary);
+    modalFooter.append(detailsBtnsContainer);
+  });
   cardButton.appendChild(btnContainer);
 
-  cardBody.append(summary, cardButton)
-  bootstrapCard.append(projectImage, cardBody)
-  card.append(bootstrapCard)
+  cardBody.append(title, cardButton);
+  bootstrapCard.append(projectImage, cardBody);
+  card.append(bootstrapCard);
 
   return card;
 };
 
 projects.forEach((project) => {
-    projectCards.append(buildCard(project))
-})
+  projectCards.append(buildCard(project));
+});
