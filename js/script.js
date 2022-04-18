@@ -55,7 +55,7 @@ const projects = [
     title: "uHost",
     summary: "This is a website for a fictional hosting company.",
     screenShot: "img/uhost.png",
-    tech: ["Ruby on Rails", "PostgreSQL"],
+    tech: ["HTML5", "CSS3", "JavaScript"],
     liveLink: "https://trekab.github.io/uHost/",
     githubRepo: "https://github.com/trekab/uHost",
   },
@@ -90,7 +90,7 @@ const buildCard = (project) => {
   btnContainer.setAttribute("data-target", "#projectModal");
   btnContainer.classList =
     "btn btn-sm btn-outline-dark font-weight-bold d-flex  align-items-center see-project-btn";
-  btnContainer.innerHTML = `<span>See this project</span><i class="fa fa-arrow-right" aria-hidden="true"></i>`;
+  btnContainer.innerHTML = `<span>See this project </span><i class="fa fa-arrow-right" aria-hidden="true"></i>`;
   btnContainer.addEventListener("click", () => {
     const modalTitle = document.getElementById("modalLabel");
     const modalBody = document.getElementsByClassName("modal-body")[0];
