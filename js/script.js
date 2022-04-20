@@ -43,13 +43,12 @@ const projects = [
     githubRepo: "https://github.com/trekab/appointments-manager",
   },
   {
-    title: "Dashboard Template",
-    summary:
-      "This is a fully responsive admin dashboard template built with HTML5 & CSS3 and I relied on Line Awesome for all the icons used.",
-    screenShot: "img/dashboard-template.png",
-    tech: ["HTML5", "CSS3"],
-    liveLink: "https://trekab.github.io/dashboard-template/",
-    githubRepo: "https://github.com/trekab/dashboard-template",
+    title: "Algorithm Sorter",
+    summary: "In this project, I implemented some interesting sorting algorithms and practiced optimizing code for these sorting algorithms.",
+    screenShot: "img/algorithm-sorter.png",
+    tech: ["HTML5", "CSS3", "JavaScript"],
+    liveLink: "https://trekab.github.io/sortable-table-and-arrays/",
+    githubRepo: "https://github.com/trekab/sortable-table-and-arrays",
   },
   {
     title: "uHost",
