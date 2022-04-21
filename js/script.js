@@ -77,8 +77,8 @@ const buildCard = (project) => {
   const cardBody = document.createElement("div");
   cardBody.classList = "card-body";
 
-  const title = document.createElement("h3");
-  title.classList = "card-text font-weight-bold text-center mb-5 project-title";
+  const title = document.createElement("h4");
+  title.classList = "card-text text-center mb-5 project-title";
   title.textContent = project.title;
 
   const cardButton = document.createElement("div");
