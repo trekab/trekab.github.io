@@ -89,7 +89,7 @@ const buildCard = (project) => {
   btnContainer.setAttribute("data-target", "#projectModal");
   btnContainer.classList =
     "btn btn-sm btn-outline-dark font-weight-bold d-flex  align-items-center see-project-btn";
-  btnContainer.innerHTML = `<span>See this project </span><i class="fa fa-arrow-right" aria-hidden="true"></i>`;
+  btnContainer.innerHTML = `<i class='fas fa-external-link-alt'></i><span>Details</span>`;
   btnContainer.addEventListener("click", () => {
     const modalTitle = document.getElementById("modalLabel");
     const modalBody = document.getElementsByClassName("modal-body")[0];
