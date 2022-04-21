@@ -2,7 +2,7 @@ const projects = [
   {
     title: "Sales Tracker API",
     summary:
-      "This is a sales tracker API where users can track specific attributes of their products e.g. orders, sales, inventory.",
+      "This is a sales tracker API where users can track specific attributes of their products e.g. orders, sales, inventory. It was built following the T.D.D approach using the Ruby on Rails framework and the PostgreSQL database.",
     screenShot: "img/sales-tracker-api-docs.png",
     tech: ["Ruby on Rails", "PostgreSQL"],
     liveLink: "https://trekab.github.io/my-tracker-api-docs/",
@@ -11,7 +11,7 @@ const projects = [
   {
     title: "To-Do List",
     summary:
-      "This is a To-Do list app where users can add projects and their corresponding task lists they like to work on.",
+      "This is a To-Do list app where users can add projects and their corresponding task lists they like to work on. This project was built using vanilla JavaScript and a heavy use of the DOM manipulation methods.",
     screenShot: "img/todo-list.png",
     tech: ["JavaScript", "HTML5", "CSS3", "Bootstrap"],
     liveLink: "https://trekab-js-todo-app.netlify.app/",
@@ -20,7 +20,7 @@ const projects = [
   {
     title: "Calculator",
     summary:
-      "This is a simple calculator for Math-magicians Inc (a fictional company) using create-react-app.",
+      "This is a simple calculator for Math-magicians Inc (a fictional company) using create-react-app. ",
     screenShot: "img/react-calculator.png",
     tech: ["JavaScript", "React.js", "CSS3"],
     liveLink: "https://trekabs-react-calculator.netlify.app/",
@@ -29,7 +29,7 @@ const projects = [
   {
     title: "Appointment Manager",
     summary:
-      "This is a simple appointment manager for Pets Medicare(a fictional company).",
+      "This is a simple appointment manager for Pets Medicare(a fictional company). The main feature on this project is the filter feature where input data can be filtered using various parameters.",
     screenShot: "img/pets-medicare.png",
     tech: [
       "JavaScript",
@@ -44,7 +44,7 @@ const projects = [
   },
   {
     title: "Algorithm Sorter",
-    summary: "In this project, I implemented some interesting sorting algorithms and practiced optimizing code for these sorting algorithms.",
+    summary: "This is simple sorting project which uses some common sorting algorthms to sort a given set of dummy data. i.e. bubble sort, insertion sort, merge sort & quartile sort",
     screenShot: "img/algorithm-sorter.png",
     tech: ["HTML5", "CSS3", "JavaScript"],
     liveLink: "https://trekab.github.io/sortable-table-and-arrays/",
@@ -52,7 +52,7 @@ const projects = [
   },
   {
     title: "uHost",
-    summary: "This is a website for a fictional hosting company.",
+    summary: "This is a website for a fictional hosting company. It was built as a way of exploring/practicing the most important CSS concepts.",
     screenShot: "img/uhost.png",
     tech: ["HTML5", "CSS3", "JavaScript"],
     liveLink: "https://trekab.github.io/uHost/",
