@@ -51,12 +51,12 @@ const projects = [
     githubRepo: "https://github.com/trekab/sortable-table-and-arrays",
   },
   {
-    title: "uHost",
-    summary: "This is a website for a fictional hosting company. It was built as a way of exploring/practicing the most important CSS concepts.",
-    screenShot: "img/uhost.png",
-    tech: ["HTML5", "CSS3", "JavaScript"],
-    liveLink: "https://trekab.github.io/uHost/",
-    githubRepo: "https://github.com/trekab/uHost",
+    title: "Skills e-learning",
+    summary: "This is a solution to the Skilled e-learning landing page challenge on Frontend Mentor.",
+    screenShot: "img/skills-elearning.jpg",
+    tech: ["HTML5", "CSS3"],
+    liveLink: "https://skilled-elearning-trekab.netlify.app/",
+    githubRepo: "https://github.com/trekab/skilled-e-learning-landing-page",
   },
 ];
 
