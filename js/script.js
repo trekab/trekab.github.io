@@ -43,12 +43,12 @@ const projects = [
     githubRepo: "https://github.com/trekab/appointments-manager",
   },
   {
-    title: "Algorithm Sorter",
-    summary: "This is simple sorting project which uses some common sorting algorthms to sort a given set of dummy data. i.e. bubble sort, insertion sort, merge sort & quartile sort",
-    screenShot: "img/algorithm-sorter.png",
-    tech: ["HTML5", "CSS3", "JavaScript"],
-    liveLink: "https://trekab.github.io/sortable-table-and-arrays/",
-    githubRepo: "https://github.com/trekab/sortable-table-and-arrays",
+    title: "Suite",
+    summary: "This is a solution to the Suite landing page challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects. Check out the README.md file in the GitHub Repo to learn more about the challenge.",
+    screenShot: "img/suite.jpg",
+    tech: ["HTML5", "CSS3"],
+    liveLink: "https://suite-landing-page-trekab.netlify.app/",
+    githubRepo: "https://github.com/trekab/suite-landing-page",
   },
   {
     title: "Skilled e-learning",
