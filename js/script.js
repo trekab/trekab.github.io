@@ -53,7 +53,7 @@ const projects = [
   {
     title: "Skilled e-learning",
     summary: "This is a solution to the Skilled e-learning landing page challenge on Frontend Mentor. Check out the README.md file in the GitHub Repo to learn more about the challenge.",
-    screenShot: "img/skills-elearning.jpg",
+    screenShot: "img/skilled-elearning.jpg",
     tech: ["HTML5", "CSS3"],
     liveLink: "https://skilled-elearning-trekab.netlify.app/",
     githubRepo: "https://github.com/trekab/skilled-e-learning-landing-page",
