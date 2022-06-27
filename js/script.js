@@ -18,13 +18,13 @@ const projects = [
     githubRepo: "https://github.com/trekab/js-todo-app",
   },
   {
-    title: "Calculator",
+    title: "Calculator App",
     summary:
-      "This is a simple calculator for Math-magicians Inc (a fictional company) using create-react-app. ",
-    screenShot: "img/react-calculator.png",
+      "This is a solution to the Calculator app challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+    screenShot: "img/calculator-app.jpg",
     tech: ["JavaScript", "React.js", "CSS3"],
-    liveLink: "https://trekabs-react-calculator.netlify.app/",
-    githubRepo: "https://github.com/trekab/react-calculator",
+    liveLink: "https://calculator-app-trekab.netlify.app/",
+    githubRepo: "https://github.com/trekab/calculator-app",
   },
   {
     title: "Appointment Manager",
@@ -44,7 +44,8 @@ const projects = [
   },
   {
     title: "Suite",
-    summary: "This is a solution to the Suite landing page challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects. Check out the README.md file in the GitHub Repo to learn more about the challenge.",
+    summary:
+      "This is a solution to the Suite landing page challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects. Check out the README.md file in the GitHub Repo to learn more about the challenge.",
     screenShot: "img/suite.jpg",
     tech: ["HTML5", "CSS3"],
     liveLink: "https://suite-landing-page-trekab.netlify.app/",
@@ -52,7 +53,8 @@ const projects = [
   },
   {
     title: "Skilled e-learning",
-    summary: "This is a solution to the Skilled e-learning landing page challenge on Frontend Mentor. Check out the README.md file in the GitHub Repo to learn more about the challenge.",
+    summary:
+      "This is a solution to the Skilled e-learning landing page challenge on Frontend Mentor. Check out the README.md file in the GitHub Repo to learn more about the challenge.",
     screenShot: "img/skilled-elearning.jpg",
     tech: ["HTML5", "CSS3"],
     liveLink: "https://skilled-elearning-trekab.netlify.app/",
@@ -96,7 +98,7 @@ const buildCard = (project) => {
     const modalFooter = document.getElementsByClassName("modal-footer")[0];
     modalBody.innerHTML = "";
     modalFooter.innerHTML = "";
-    const projectImg = document.createElement('img');
+    const projectImg = document.createElement("img");
     projectImg.classList = "col-lg-6";
     projectImg.setAttribute("src", project.screenShot);
     projectImg.setAttribute("alt", project.title);
