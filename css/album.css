@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Delius&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
 
 * {
-  font-family: 'Delius', cursive;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .skill-category-title i {
