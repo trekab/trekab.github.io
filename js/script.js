@@ -18,7 +18,7 @@ const projects = [
     githubRepo: "https://github.com/trekab/js-todo-app",
   },
   {
-    title: "Calculator App",
+    title: "Calculator",
     summary:
       "This is a solution to the Calculator app challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
     screenShot: "img/calculator-app.jpg",
