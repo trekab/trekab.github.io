@@ -9,13 +9,13 @@ const projects = [
     githubRepo: "https://github.com/trekab/my-tracker-api",
   },
   {
-    title: "To-Do List",
+    title: "Todo",
     summary:
-      "This is a To-Do list app where users can add projects and their corresponding task lists they like to work on. This project was built using vanilla JavaScript and a heavy use of the DOM manipulation methods.",
-    screenShot: "img/todo-list.png",
-    tech: ["JavaScript", "HTML5", "CSS3", "Bootstrap"],
-    liveLink: "https://trekab-js-todo-app.netlify.app/",
-    githubRepo: "https://github.com/trekab/js-todo-app",
+      "This is a solution to the Todo app challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+    screenShot: "img/todo-list.jpg",
+    tech: ["JavaScript", "HTML5", "CSS3", "React.js"],
+    liveLink: "https://todo-app-trekab.netlify.app/",
+    githubRepo: "https://github.com/trekab/todo-app",
   },
   {
     title: "Calculator",
