@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Josefin+Sans:wght@400;700&display=swap');
 
 * {
   font-family: "Josefin Sans", sans-serif;
@@ -41,7 +41,12 @@ i {
   font-size: 1.12rem;
 }
 
+#header-logo,#logo{
+font-family: 'Fira Code', monospace;
+} 
+
 #logo {
+  
   display: inline-block;
   cursor: pointer;
 }
