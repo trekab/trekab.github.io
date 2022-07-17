@@ -10,7 +10,7 @@ const projects = [
   },
   {
     title: "Todo",
-    summary: `<p>This is a classic todo app with a few twists! This app includes a dark/light theme toggle and a drag & drop reordering of the todo tasks.</p>
+    summary: `<p>This is a classic todo app with a few twists!</p>
       <p>Users are able to:</p>
       <ul>
         <li>Add new todos to the list</li>
@@ -28,8 +28,13 @@ const projects = [
   },
   {
     title: "Calculator",
-    summary:
-      "This is a solution to the Calculator app challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+    summary: `<p>This is a simple calculator app the performs basic calculations. It was a great test of my CSS and JS skills.</p>
+      <p>Users are able to:</p>
+      <ul>
+        <li>Perform mathematical operations like addition, subtraction, multiplication, and division</li>
+        <li>Adjust the color theme based on their preference</li>
+      </ul>
+      `,
     screenShot: "img/calculator-app.jpg",
     tech: ["JavaScript", "React.js", "CSS3"],
     liveLink: "https://calculator-app-trekab.netlify.app/",
