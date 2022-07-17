@@ -10,8 +10,17 @@ const projects = [
   },
   {
     title: "Todo",
-    summary:
-      "This is a solution to the Todo app challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+    summary: `<p>This is a classic todo app with a few twists! This app includes a dark/light theme toggle and a drag & drop reordering of the todo tasks.</p>
+      <p>Users are able to:</p>
+      <ul>
+        <li>Add new todos to the list</li>
+        <li>Mark todos as complete</li>
+        <li>Delete todos from the list</li>
+        <li>Filter by all/active/complete todos</li>
+        <li>Clear all completed todos</li>
+        <li>Toggle light and dark mode</li>
+        <li>Drag and drop to reorder items on the list</li>
+      </ul>`,
     screenShot: "img/todo-list.jpg",
     tech: ["JavaScript", "HTML5", "CSS3", "React.js"],
     liveLink: "https://todo-app-trekab.netlify.app/",
@@ -104,7 +113,7 @@ const buildCard = (project) => {
     projectImg.setAttribute("alt", project.title);
     const summary = document.createElement("p");
     summary.classList = "col-lg-6";
-    summary.textContent = project.summary;
+    summary.innerHTML = project.summary;
     modalTitle.innerText = project.title;
 
     project.tech.forEach((element) => {
