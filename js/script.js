@@ -58,7 +58,7 @@ const projects = [
   },
   {
     title: "Suite",
-    summary: `<p>This is a small-ish HTML and CSS only landing page that includes some interesting layout decisions. It was a perfect in terms of testing my layout and responsive skills!</p>
+    summary: `<p>This is a small-ish HTML and CSS only landing page that involved making some interesting layout decisions.</p>
       <p>Users are able to:</p>
       <ul>
       <li>View the optimal layout depending on their device's screen size</li>
@@ -72,7 +72,7 @@ const projects = [
   },
   {
     title: "Skilled e-learning",
-    summary: `<p>This responsive page was a perfect of understanding of the fundamentals of HTML & CSS.</p>
+    summary: `<p>This responsive page was a perfect way of testing my understanding of the fundamentals of HTML & CSS.</p>
       <p>Users are able to:</p>
       <ul>
       <li>View the optimal layout depending on their device's screen size</li>
