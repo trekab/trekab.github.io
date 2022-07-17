@@ -58,8 +58,13 @@ const projects = [
   },
   {
     title: "Suite",
-    summary:
-      "This is a solution to the Suite landing page challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects. Check out the README.md file in the GitHub Repo to learn more about the challenge.",
+    summary: `<p>This is a small-ish HTML and CSS only landing page that includes some interesting layout decisions. It was a perfect in terms of testing my layout and responsive skills!</p>
+      <p>Users are able to:</p>
+      <ul>
+      <li>View the optimal layout depending on their device's screen size</li>
+      <li>See hover states for interactive elements</li>
+      </ul>
+      `,
     screenShot: "img/suite.jpg",
     tech: ["HTML5", "CSS3"],
     liveLink: "https://suite-landing-page-trekab.netlify.app/",
