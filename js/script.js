@@ -72,8 +72,13 @@ const projects = [
   },
   {
     title: "Skilled e-learning",
-    summary:
-      "This is a solution to the Skilled e-learning landing page challenge on Frontend Mentor. Check out the README.md file in the GitHub Repo to learn more about the challenge.",
+    summary: `<p>This responsive page was a perfect of understanding of the fundamentals of HTML & CSS.</p>
+      <p>Users are able to:</p>
+      <ul>
+      <li>View the optimal layout depending on their device's screen size</li>
+      <li>See hover states for interactive elements</li>
+      </ul>
+      `,
     screenShot: "img/skilled-elearning.jpg",
     tech: ["HTML5", "CSS3"],
     liveLink: "https://skilled-elearning-trekab.netlify.app/",
