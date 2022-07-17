@@ -28,7 +28,7 @@ const projects = [
   },
   {
     title: "Calculator",
-    summary: `<p>This is a simple calculator app the performs basic calculations. It was a great test of my CSS and JS skills.</p>
+    summary: `<p>This is a simple calculator app the performs basic calculations. It was a great test to my CSS and JS skills.</p>
       <p>Users are able to:</p>
       <ul>
         <li>Perform mathematical operations like addition, subtraction, multiplication, and division</li>
