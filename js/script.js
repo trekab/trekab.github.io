@@ -41,20 +41,19 @@ const projects = [
     githubRepo: "https://github.com/trekab/calculator-app",
   },
   {
-    title: "Appointment Manager",
-    summary:
-      "This is a simple appointment manager for Pets Medicare(a fictional company). The main feature on this project is the filter feature where input data can be filtered using various parameters.",
-    screenShot: "img/pets-medicare.png",
-    tech: [
-      "JavaScript",
-      "React.js",
-      "CSS3",
-      "React Icons",
-      "React Moment",
-      "Bootstrap",
-    ],
-    liveLink: "https://appointments-manager.netlify.app/",
-    githubRepo: "https://github.com/trekab/appointments-manager",
+    title: "Tic Tac Toe Game",
+    summary: `<p>This is the classic Tic Tac Toe game challenge I built using the React.js library.</p>
+      <p>Users are able to:</p>
+      <ul>
+      <li>View the optimal layout depending on their device's screen size</li>
+      <li>See hover states for interactive elements</li>
+      <li>Play the game either solo vs the computer or multiplayer against another person</li>
+      </ul>
+      `,
+    screenShot: "img/tic-tac-toe.jpg",
+    tech: ["JavaScript", "React.js", "CSS3", "HTML5"],
+    liveLink: "https://tic-tac-toe-trekab.netlify.app/",
+    githubRepo: "https://github.com/trekab/tic-tac-toe-app",
   },
   {
     title: "Suite",
