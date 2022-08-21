@@ -56,18 +56,18 @@ const projects = [
     githubRepo: "https://github.com/trekab/tic-tac-toe-app",
   },
   {
-    title: "Suite",
-    summary: `<p>This is a small-ish HTML and CSS only landing page that involved making some interesting layout decisions.</p>
+    title: "Meet",
+    summary: `<p>This is a small HTML and CSS only landing page that involved making some interesting layout decisions.</p>
       <p>Users are able to:</p>
       <ul>
       <li>View the optimal layout depending on their device's screen size</li>
       <li>See hover states for interactive elements</li>
       </ul>
       `,
-    screenShot: "img/suite.jpg",
+    screenShot: "img/meet.jpg",
     tech: ["HTML5", "CSS3"],
-    liveLink: "https://suite-landing-page-trekab.netlify.app/",
-    githubRepo: "https://github.com/trekab/suite-landing-page",
+    liveLink: "https://meet-trekab.netlify.app/",
+    githubRepo: "https://github.com/trekab/meet-landing-page",
   },
   {
     title: "Skilled e-learning",
