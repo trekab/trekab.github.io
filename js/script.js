@@ -1,121 +1,46 @@
-const projects = [
-  {
-    title: "Sales Tracker API",
-    summary:
-      "This is a sales tracker API where users can track specific attributes of their products e.g. orders, sales, inventory. It was built following the T.D.D approach using the Ruby on Rails framework and the PostgreSQL database.",
-    screenShot: "img/sales-tracker-api-docs.png",
-    tech: ["Ruby on Rails", "PostgreSQL"],
-    liveLink: "https://trekab.github.io/my-tracker-api-docs/",
-    githubRepo: "https://github.com/trekab/my-tracker-api",
-  },
-  {
-    title: "Todo",
-    summary: `<p>This is a classic todo app with a few twists!</p>
-      <p>Users are able to:</p>
-      <ul>
-        <li>Add new todos to the list</li>
-        <li>Mark todos as complete</li>
-        <li>Delete todos from the list</li>
-        <li>Filter by all/active/complete todos</li>
-        <li>Clear all completed todos</li>
-        <li>Toggle light and dark mode</li>
-        <li>Drag and drop to reorder items on the list</li>
-      </ul>`,
-    screenShot: "img/todo-list.jpg",
-    tech: ["JavaScript", "HTML5", "CSS3", "React.js"],
-    liveLink: "https://todo-app-trekab.netlify.app/",
-    githubRepo: "https://github.com/trekab/todo-app",
-  },
-  {
-    title: "Calculator",
-    summary: `<p>This is a simple calculator app the performs basic calculations. It was a great test to my CSS and JS skills.</p>
-      <p>Users are able to:</p>
-      <ul>
-        <li>Perform mathematical operations like addition, subtraction, multiplication, and division</li>
-        <li>Adjust the color theme based on their preference</li>
-      </ul>
-      `,
-    screenShot: "img/calculator-app.jpg",
-    tech: ["JavaScript", "React.js", "CSS3"],
-    liveLink: "https://calculator-app-trekab.netlify.app/",
-    githubRepo: "https://github.com/trekab/calculator-app",
-  },
-  {
-    title: "Tic Tac Toe Game",
-    summary: `<p>This is the classic Tic Tac Toe game challenge I built using the React.js library.</p>
-      <p>Users are able to:</p>
-      <ul>
-      <li>View the optimal layout depending on their device's screen size</li>
-      <li>See hover states for interactive elements</li>
-      <li>Play the game either solo vs the computer or multiplayer against another person</li>
-      </ul>
-      `,
-    screenShot: "img/tic-tac-toe.jpg",
-    tech: ["JavaScript", "React.js", "CSS3", "HTML5"],
-    liveLink: "https://tic-tac-toe-trekab.netlify.app/",
-    githubRepo: "https://github.com/trekab/tic-tac-toe-app",
-  },
-  {
-    title: "Meet",
-    summary: `<p>This is a small HTML and CSS only landing page that involved making some interesting layout decisions.</p>
-      <p>Users are able to:</p>
-      <ul>
-      <li>View the optimal layout depending on their device's screen size</li>
-      <li>See hover states for interactive elements</li>
-      </ul>
-      `,
-    screenShot: "img/meet.jpg",
-    tech: ["HTML5", "CSS3"],
-    liveLink: "https://meet-trekab.netlify.app/",
-    githubRepo: "https://github.com/trekab/meet-landing-page",
-  },
-  {
-    title: "Skilled e-learning",
-    summary: `<p>This responsive page was a perfect way of testing my understanding of the fundamentals of HTML & CSS.</p>
-      <p>Users are able to:</p>
-      <ul>
-      <li>View the optimal layout depending on their device's screen size</li>
-      <li>See hover states for interactive elements</li>
-      </ul>
-      `,
-    screenShot: "img/skilled-elearning.jpg",
-    tech: ["HTML5", "CSS3"],
-    liveLink: "https://skilled-elearning-trekab.netlify.app/",
-    githubRepo: "https://github.com/trekab/skilled-e-learning-landing-page",
-  },
-];
+import projects from "./projects.js";
+
+// Constants for string literals
+const TECH_BADGE_CLASS = "badge badge-dark m-1";
+const CARD_CLASSES = "col-md-6 col-lg-4";
+const CARD_BODY_CLASS = "card-body";
+const CARD_TEXT_CLASS = "card-text text-center mb-5 project-title";
+const SEE_PROJECT_BTN_CLASS = "btn btn-sm btn-outline-dark font-weight-bold d-flex align-items-center see-project-btn";
 
 const projectCards = document.getElementById("project-cards");
 
+// Refactored buildCard function
 const buildCard = (project) => {
   const card = document.createElement("div");
-  card.classList = "col-md-6 col-lg-4";
+  card.classList = CARD_CLASSES;
 
   const bootstrapCard = document.createElement("div");
   bootstrapCard.classList = "card mb-4 shadow-lg bg-gradient";
 
   const projectImage = document.createElement("img");
   projectImage.classList = "bd-placeholder-img card-img-top w-100 h-100";
-  projectImage.setAttribute("src", project.screenShot);
-  projectImage.setAttribute("alt", project.title);
+  projectImage.src = project.screenShot;
+  projectImage.alt = project.title;
 
   const cardBody = document.createElement("div");
-  cardBody.classList = "card-body";
+  cardBody.classList = CARD_BODY_CLASS;
 
   const title = document.createElement("h4");
-  title.classList = "card-text text-center mb-5 project-title";
+  title.classList = CARD_TEXT_CLASS;
   title.textContent = project.title;
 
   const cardButton = document.createElement("div");
   cardButton.classList = "d-flex justify-content-end";
+
   const btnContainer = document.createElement("button");
-  btnContainer.setAttribute("type", "button");
-  btnContainer.setAttribute("data-toggle", "modal");
-  btnContainer.setAttribute("data-target", "#projectModal");
-  btnContainer.classList =
-    "btn btn-sm btn-outline-dark font-weight-bold d-flex  align-items-center see-project-btn";
+  btnContainer.type = "button";
+  btnContainer.dataset.toggle = "modal";
+  btnContainer.dataset.target = "#projectModal";
+  btnContainer.classList = SEE_PROJECT_BTN_CLASS;
   btnContainer.innerHTML = `<span>Details</span><i class='fas fa-external-link-alt'></i>`;
-  btnContainer.addEventListener("click", () => {
+  
+
+	btnContainer.addEventListener("click", () => {
     const modalTitle = document.getElementById("modalLabel");
     const modalBody = document.getElementsByClassName("modal-body")[0];
     const modalFooter = document.getElementsByClassName("modal-footer")[0];
@@ -163,31 +88,31 @@ const buildCard = (project) => {
 };
 
 projects.forEach((project) => {
-  projectCards.append(buildCard(project));
+  projectCards.appendChild(buildCard(project));
 });
 
 const getRandomQuote = async () => {
-	try{
-		const response = await fetch("https://api.quotable.io/quotes/random?tags=technology,famous-quotes");
-		if(!response){
-			throw new Error("Failed to fetch the random quote");
-		}
-		const data = await response.json();
-		return { content:  data.content,
-				 author: data.author
-				};
-	} catch(error){
-		console.error("Error:", error.log);
-	}
+  try {
+    const response = await fetch("https://api.quotable.io/quotes/random?tags=technology,famous-quotes");
+    if (!response.ok) {
+      throw new Error("Failed to fetch the random quote");
+    }
+    const data = await response.json();
+    const { content, author } = data[0];
+    return { content, author };
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
 };
 
 const updateQuoteInDOM = (quote) => {
   const randomQuoteSection = document.getElementById("random-quote");
-	if(randomQuoteSection){
+  if (randomQuoteSection) {
     randomQuoteSection.innerHTML = `<blockquote>${quote.content}</blockquote> - ${quote.author}`;
-	}
+  }
 };
 
+// Fetch and update the quote when the page loads
 (async () => {
   try {
     const quote = await getRandomQuote();
@@ -198,10 +123,12 @@ const updateQuoteInDOM = (quote) => {
 })();
 
 const fetchQuotesEveryMinute = () => {
-	setInterval(async () => {
-		const quote = await getRandomQuote();
-		updateQuoteInDOM(quote);
-	}, 60000);
+  setInterval(async () => {
+    const quote = await getRandomQuote();
+    updateQuoteInDOM(quote);
+  }, 60000);
 };
 
+// Fetch a new quote every minute
 fetchQuotesEveryMinute();
+
