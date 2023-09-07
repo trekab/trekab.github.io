@@ -168,7 +168,7 @@ projects.forEach((project) => {
 
 const getRandomQuote = async () => {
 	try{
-		const response = await fetch("https://api.quotable.io/random");
+		const response = await fetch("https://api.quotable.io/quotes/random?tags=technology,famous-quotes");
 		if(!response){
 			throw new Error("Failed to fetch the random quote");
 		}
