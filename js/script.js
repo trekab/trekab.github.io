@@ -165,3 +165,34 @@ const buildCard = (project) => {
 projects.forEach((project) => {
   projectCards.append(buildCard(project));
 });
+
+const getRandomQuote = async () => {
+	try{
+		const response = await fetch("https://api.quotable.io/random");
+		if(!response){
+			throw new Error("Failed to fetch the random quote");
+		}
+		const data = await response.json();
+		return { content:  data.content,
+				 author: data.author
+				};
+	} catch(error){
+		console.error("Error:", error.log);
+	}
+};
+
+const updateQuoteInDOM = (quote) => {
+	const randomQuoteSection = document.getElementById("random-quote");
+	if(randomQuoteSection){
+		randomQuoteSection.innerHTML = `<blockquote>${quote.content}</blockquote> - ${quote.author}`;
+	}
+};
+
+const fetchQuotesEveryMinute = () => {
+	setInterval(async () => {
+		const quote = await getRandomQuote();
+		updateQuoteInDOM(quote);
+	}, 60000);
+};
+
+fetchQuotesEveryMinute();
