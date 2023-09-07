@@ -182,11 +182,20 @@ const getRandomQuote = async () => {
 };
 
 const updateQuoteInDOM = (quote) => {
-	const randomQuoteSection = document.getElementById("random-quote");
+  const randomQuoteSection = document.getElementById("random-quote");
 	if(randomQuoteSection){
-		randomQuoteSection.innerHTML = `<blockquote>${quote.content}</blockquote> - ${quote.author}`;
+    randomQuoteSection.innerHTML = `<blockquote>${quote.content}</blockquote> - ${quote.author}`;
 	}
 };
+
+(async () => {
+  try {
+    const quote = await getRandomQuote();
+    updateQuoteInDOM(quote);
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
+})();
 
 const fetchQuotesEveryMinute = () => {
 	setInterval(async () => {
