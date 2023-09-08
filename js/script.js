@@ -56,8 +56,8 @@ const buildCard = (project) => {
     modalTitle.innerText = project.title;
 
     project.tech.forEach((element) => {
-      let techBadge = document.createElement("span");
-      techBadge.classList = "badge badge-dark m-1";
+      const techBadge = document.createElement("span");
+      techBadge.classList = TECH_BADGE_CLASS;
       techBadge.textContent = element;
       summary.appendChild(techBadge);
     });
