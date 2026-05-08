@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" class="js-focus-visible">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Treasure Kabareebe's personal portfolio for full-stack software projects."
+      content="Treasure Kabareebe — Lead Rails & Platform Engineer building scalable, reliable, data-intensive production systems."
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/pawn.png" />
+    <title>Treasure Kabareebe — Lead Rails &amp; Platform Engineer</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"
@@ -21,415 +26,559 @@
       integrity="sha512-Cdvnk1SFWqcb3An6gMyqDRH40Js8qmsWcSK10I2gSifCe2LilaPMsHd6DldEvQ3uIlCb1qdRUrNeAFFleOu4xQ=="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="css/album.css" />
-    <link rel="stylesheet" href="css/anime.css" />
-    <link rel="shortcut icon" href="img/pawn.png" />
-    <title>Treasure K.</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-LPK85XKW5Y"
-    ></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              mono: ["Fira Code", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LPK85XKW5Y"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag() { dataLayer.push(arguments); }
       gtag("js", new Date());
-
       gtag("config", "G-LPK85XKW5Y");
     </script>
   </head>
-  <body data-gr-c-s-loaded="true">
-    <header>
-      <div class="bg-dark collapse" id="navbarHeader">
-        <div class="container navbar-content">
-          <div class="row">
-            <div class="col-md-8 py-4">
-              <h4 class="border-bottom__custom">
-                About Me<i class="far fa-smile-wink m-2"></i>
-              </h4>
+
+  <body class="bg-slate-50 text-slate-800 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-slate-900 z-50 shadow-md">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="#" class="font-mono text-white font-medium text-sm">&lt;trekab/&gt;</a>
+
+          <div class="hidden md:flex items-center gap-6">
+            <a href="#about" class="text-slate-300 hover:text-white text-sm transition-colors">About</a>
+            <a href="#case-studies" class="text-slate-300 hover:text-white text-sm transition-colors">Case Studies</a>
+            <a href="#stack" class="text-slate-300 hover:text-white text-sm transition-colors">Stack</a>
+            <a href="#writing" class="text-slate-300 hover:text-white text-sm transition-colors">Writing</a>
+            <a href="#contact" class="text-slate-300 hover:text-white text-sm transition-colors">Contact</a>
+            <a
+              href="https://docs.google.com/document/d/1Jb5gIhdmVQwsiqMh2R9kNU-E_GQ0W2X6PYv9KX-QC5I/edit?usp=sharing"
+              target="_blank"
+              rel="noopener"
+              class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded transition-colors font-medium"
+              >Resume</a
+            >
+          </div>
+
+          <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+          <div class="flex flex-col gap-4 pt-2">
+            <a href="#about" class="text-slate-300 hover:text-white text-sm">About</a>
+            <a href="#case-studies" class="text-slate-300 hover:text-white text-sm">Case Studies</a>
+            <a href="#stack" class="text-slate-300 hover:text-white text-sm">Stack</a>
+            <a href="#writing" class="text-slate-300 hover:text-white text-sm">Writing</a>
+            <a href="#contact" class="text-slate-300 hover:text-white text-sm">Contact</a>
+            <a
+              href="https://docs.google.com/document/d/1Jb5gIhdmVQwsiqMh2R9kNU-E_GQ0W2X6PYv9KX-QC5I/edit?usp=sharing"
+              target="_blank"
+              rel="noopener"
+              class="text-blue-400 text-sm font-medium"
+              >Resume</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="min-h-screen flex items-center bg-slate-900 text-white pt-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="max-w-3xl">
+          <p class="font-mono text-blue-400 text-sm mb-4">Hello, I'm Treasure Kabareebe</p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            Lead Rails &amp; Platform Engineer
+          </h1>
+          <p class="text-xl text-slate-300 mb-4 leading-relaxed">
+            Building scalable, reliable, data-intensive production systems.
+          </p>
+          <p class="text-slate-400 mb-10 max-w-2xl leading-relaxed">
+            Senior backend engineer with deep production ownership in fintech and telecom.
+            Specialising in Rails, distributed systems, observability, and CI/CD —
+            from architecture decisions to on-call reliability.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#case-studies"
+              class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded transition-colors"
+              >View Case Studies</a
+            >
+            <a
+              href="https://docs.google.com/document/d/1Jb5gIhdmVQwsiqMh2R9kNU-E_GQ0W2X6PYv9KX-QC5I/edit?usp=sharing"
+              target="_blank"
+              rel="noopener"
+              class="border border-slate-500 hover:border-white text-slate-300 hover:text-white font-medium px-6 py-3 rounded transition-colors"
+              >Resume</a
+            >
+            <a
+              href="#contact"
+              class="border border-slate-500 hover:border-white text-slate-300 hover:text-white font-medium px-6 py-3 rounded transition-colors"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-2">About</h2>
+        <div class="w-12 h-1 bg-blue-600 mb-10"></div>
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="text-slate-600 leading-relaxed space-y-4">
+            <p>
+              I'm a senior software engineer with deep ownership across the full lifecycle of
+              production systems — from schema design to deployment pipelines to on-call
+              reliability.
+            </p>
+            <p>
+              My core stack is Ruby on Rails paired with PostgreSQL, but my day-to-day spans
+              infrastructure, data pipelines, observability tooling, and product delivery.
+              I've shipped systems in regulated fintech environments and high-throughput telecom
+              platforms where correctness, uptime, and maintainability are non-negotiable.
+            </p>
+            <p>
+              I care about systems that other engineers can confidently operate, not just
+              systems that work when I'm watching. That means readable code, meaningful metrics,
+              and CI pipelines teams actually trust.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-slate-700 mb-4">Core Expertise</h3>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-slate-100 text-slate-700 text-sm px-3 py-1 rounded-full font-medium">Ruby on Rails</span>
+              <span class="bg-slate-100 text-slate-700 text-sm px-3 py-1 rounded-full font-medium">PostgreSQL</span>
+              <span class="bg-slate-100 text-slate-700 text-sm px-3 py-1 rounded-full font-medium">Redis</span>
+              <span class="bg-slate-100 text-slate-700 text-sm px-3 py-1 rounded-full font-medium">Sidekiq</span>
+              <span class="bg-slate-100 text-slate-700 text-sm px-3 py-1 rounded-full font-medium">REST APIs</span>
+              <span class="bg-slate-100 text-slate-700 text-sm px-3 py-1 rounded-full font-medium">GraphQL</span>
+              <span class="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full font-medium">Apache Kafka</span>
+              <span class="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full font-medium">Apache Spark</span>
+              <span class="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full font-medium">Data Pipelines</span>
+              <span class="bg-green-50 text-green-700 text-sm px-3 py-1 rounded-full font-medium">Docker</span>
+              <span class="bg-green-50 text-green-700 text-sm px-3 py-1 rounded-full font-medium">CI/CD</span>
+              <span class="bg-green-50 text-green-700 text-sm px-3 py-1 rounded-full font-medium">Linux</span>
+              <span class="bg-green-50 text-green-700 text-sm px-3 py-1 rounded-full font-medium">Observability</span>
+            </div>
+
+            <h3 class="font-semibold text-slate-700 mb-4">Domain Experience</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-amber-50 text-amber-700 text-sm px-3 py-1 rounded-full font-medium">Fintech</span>
+              <span class="bg-amber-50 text-amber-700 text-sm px-3 py-1 rounded-full font-medium">Telecom</span>
+              <span class="bg-amber-50 text-amber-700 text-sm px-3 py-1 rounded-full font-medium">SaaS</span>
+              <span class="bg-amber-50 text-amber-700 text-sm px-3 py-1 rounded-full font-medium">Regulated Systems</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section id="case-studies" class="py-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-2">Case Studies</h2>
+        <div class="w-12 h-1 bg-blue-600 mb-4"></div>
+        <p class="text-slate-500 mb-12 max-w-2xl">
+          Production systems I've owned end-to-end — from design through deployment to ongoing reliability.
+        </p>
+
+        <!-- CEIR Platform -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-100 mb-8 overflow-hidden">
+          <div class="p-8">
+            <div class="flex items-start justify-between flex-wrap gap-4 mb-6">
               <div>
-                <div>
-                  <p>
-                    Hello! I'm <span class="font-weight-bold">Treasure Kabareebe</span>.
-                  </p>
-                  <p>
-                    I'm a seasoned software developer with a passion for leveraging command-line interfaces to craft robust and interactive computing solutions. With expertise in Ruby on Rails and the dynamic functionalities of React.js, I deliver sustainable web applications that offer seamless front-end experiences.
-                  </p>
-                  <p>
-                    As a dedicated mentor, I find joy in guiding aspiring developers and those making a career transition into web development, helping them navigate their initial steps in this vibrant field.
-                  </p>
-                  <p>
-                    Beyond the world of code, I'm an avid chess player—both online and offline. My love for this strategic game mirrors my analytical approach to tech problem-solving.
-                  </p>
-                  <p>
-                    Let's connect and journey together through the constantly evolving landscape of software engineering, exchanging insights and experiences along the way.
-                  </p>
-                </div>
-                <h4 class="border-bottom__custom">
-                  Skills<i class="fas fa-award m-2"></i>
-                </h4>
-                <div class="row">
-                  <div class="col-lg-6">
-                    <h5 class="skill-category-title text-center">
-                      Technical Skills<i class="fas fa-tools m-1"></i>
-                    </h5>
-                    <ul class="m-1">
-                      <li>
-                        Python, Ruby & JavaScript core language features and
-                        concepts
-                      </li>
-                      <li>Ruby on Rails web app framework</li>
-                      <li>
-                        React.js — JavaScript library for building user
-                        interfaces
-                      </li>
-                      <li>
-                        Redux — for state management in react applications
-                      </li>
-                      <li>
-                        GraphQL — a powerful, typed, REST API alternative.
-                      </li>
-                      <li>Relay — the glue between GraphQL and React</li>
-                      <li>
-                        React Native — a cross-platform mobile app development
-                        library
-                      </li>
-                      <li>
-                        Databases – relational (SQL) databases & NoSQL databases
-                      </li>
-                      <li>Unit, integration, end-to-end and UI testing</li>
-                      <li>
-                        Source code management with the git version control
-                        system
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-lg-6">
-                    <h5 class="skill-category-title text-center">
-                      Soft Skills<i class="far fa-handshake m-1"></i>
-                    </h5>
-                    <ul class="text-justify m-1">
-                      <li>Project management</li>
-                      <li>Mentoring</li>
-                      <li>Remote Work Best Practices</li>
-                      <li>Cross-cultural Communication</li>
-                      <li>Collaboration</li>
-                      <li>Pair Programming</li>
-                    </ul>
-                  </div>
-                </div>
-                <ul class="nav my-3 align-items-center">
-                  <li class="mx-3 p-0">
-                    <i class="fab fa-linux"></i>
-                  </li>
-                  <li class="mx-3 p-0">
-                    <i class="icon-shell"></i>
-                  </li>
-                  <li class="mx-3 p-0">
-                    <i class="icon-python"></i>
-                  </li>
-                  <li class="mx-3 p-0">
-                    <i class="icon-ruby"></i>
-                  </li>
-                  <li class="mx-3 p-0">
-                    <i class="icon-ruby-on-rails-alt"></i>
-                  </li>
-                  <li class="mx-3 p-0">
-                    <i class="icon-javascript"></i>
-                  </li>
-                  <li class="mx-3 p-0">
-                    <i class="icon-reactjs"></i>
-                  </li>
-                  <li class="mx-3 p-0">
-                    <i class="fab fa-html5"></i>
-                  </li>
-                  <li class="mx-3 p-0">
-                    <i class="fab fa-css3-alt"></i>
-                  </li>
-                  <li class="mx-3 p-0">
-                    <i class="fab fa-sass"></i>
-                  </li>
-                  <li class="mx-3 p-0">
-                    <i class="icon-postgres-alt"></i>
-                  </li>
-                  <li class="mx-3 p-0">
-                    <i class="icon-mysql"></i>
-                  </li>
-                  <li class="mx-3 p-0">
-                    <i class="icon-mongodb"></i>
-                  </li>
-                  <li class="mx-3 p-0">
-                    <i class="icon-git"></i>
-                  </li>
-                </ul>
+                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Telecom / Data Platform</span>
+                <h3 class="text-2xl font-bold mt-1">CEIR Platform</h3>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-medium">Ruby on Rails</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-medium">PostgreSQL</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-medium">Apache Kafka</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-medium">Apache Spark</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-medium">Docker</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-medium">CI/CD</span>
               </div>
             </div>
-            <div class="col-md-3 offset-md-1 py-4">
-              <h4 class="border-bottom__custom d-inline-block">
-                Contact<i class="far fa-address-card m-2"></i>
-              </h4>
-              <ul class="list-unstyled">
-                <li>
-                  <a
-                    href="https://twitter.com/t_kabareebe"
-                    class="primary-color"
-                    target="_blank"
-                    rel="noopener"
-                    >X</a
-                  >
+
+            <p class="text-slate-600 mb-8 leading-relaxed">
+              Central Equipment Identity Register platform processing national-scale device registration data across
+              multiple mobile network operators. The system ingests high-volume data streams, enforces regulatory
+              compliance, and serves real-time query APIs to carriers and regulators.
+            </p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+              <div class="bg-slate-50 rounded-lg p-4">
+                <div class="text-blue-500 mb-2 text-lg"><i class="fas fa-database"></i></div>
+                <div class="font-semibold text-slate-700 text-sm mb-1">Data Scale</div>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  High-volume device registration pipelines ingesting data from multiple network operators
+                </p>
+              </div>
+              <div class="bg-slate-50 rounded-lg p-4">
+                <div class="text-blue-500 mb-2 text-lg"><i class="fas fa-tachometer-alt"></i></div>
+                <div class="font-semibold text-slate-700 text-sm mb-1">Performance</div>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Query optimisation and indexing strategies to maintain low-latency reads on large datasets
+                </p>
+              </div>
+              <div class="bg-slate-50 rounded-lg p-4">
+                <div class="text-blue-500 mb-2 text-lg"><i class="fas fa-chart-line"></i></div>
+                <div class="font-semibold text-slate-700 text-sm mb-1">Observability</div>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Structured logging, metrics dashboards, and alerting to keep pipeline health visible
+                </p>
+              </div>
+              <div class="bg-slate-50 rounded-lg p-4">
+                <div class="text-blue-500 mb-2 text-lg"><i class="fas fa-ship"></i></div>
+                <div class="font-semibold text-slate-700 text-sm mb-1">Deployment</div>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Containerised services with automated CI/CD enabling confident, zero-downtime releases
+                </p>
+              </div>
+            </div>
+
+            <div class="border-t border-slate-100 pt-6">
+              <h4 class="font-semibold text-slate-700 mb-4">Engineering challenges</h4>
+              <ul class="space-y-3 text-slate-600 text-sm">
+                <li class="flex gap-3">
+                  <span class="text-blue-400 mt-0.5 shrink-0">▸</span>
+                  Designing fault-tolerant data ingestion pipelines that handle upstream inconsistencies
+                  from multiple operators without data loss or silent corruption
                 </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/treasure-kabareebe/"
-                    target="_blank"
-                    class="primary-color"
-                    rel="noopener"
-                    >LinkedIn</a
-                  >
+                <li class="flex gap-3">
+                  <span class="text-blue-400 mt-0.5 shrink-0">▸</span>
+                  Keeping query latency acceptable as dataset size grew — required deliberate schema
+                  evolution, targeted indexing, and query plan analysis
                 </li>
-                <li>
-                  <a
-                    href="https://github.com/trekab"
-                    target="_blank"
-                    class="primary-color"
-                    rel="noopener"
-                    >GitHub</a
-                  >
+                <li class="flex gap-3">
+                  <span class="text-blue-400 mt-0.5 shrink-0">▸</span>
+                  Building observability from scratch so on-call engineers could diagnose issues
+                  without needing deep system knowledge
                 </li>
-                <li>
-                  <a
-                    href="https://www.frontendmentor.io/profile/trekab"
-                    target="_blank"
-                    class="primary-color"
-                    rel="noopener"
-                    >Frontend Mentor</a
-                  >
+                <li class="flex gap-3">
+                  <span class="text-blue-400 mt-0.5 shrink-0">▸</span>
+                  Shipping infrastructure changes (Dockerisation, pipeline refactors) without
+                  disrupting live data flows or creating deployment risk
                 </li>
-                <li>
-                  <a
-                    href="https://hackernoon.com/u/trekab"
-                    target="_blank"
-                    class="primary-color"
-                    rel="noopener"
-                    >Hackernoon(Blog)</a
-                  >
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Gateway -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+          <div class="p-8">
+            <div class="flex items-start justify-between flex-wrap gap-4 mb-6">
+              <div>
+                <span class="text-xs font-semibold text-green-600 uppercase tracking-wider">Fintech / Payments</span>
+                <h3 class="text-2xl font-bold mt-1">Payment Gateway</h3>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-medium">Ruby on Rails</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-medium">PostgreSQL</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-medium">Docker</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-medium">CI/CD</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-medium">RSpec</span>
+              </div>
+            </div>
+
+            <p class="text-slate-600 mb-8 leading-relaxed">
+              Production payment processing system handling real financial transactions with strict reliability
+              and compliance requirements. Led a team of engineers owning the full development lifecycle —
+              from feature delivery to incident response.
+            </p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+              <div class="bg-slate-50 rounded-lg p-4">
+                <div class="text-green-500 mb-2 text-lg"><i class="fas fa-users"></i></div>
+                <div class="font-semibold text-slate-700 text-sm mb-1">Team Leadership</div>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Led and mentored engineers through feature delivery, code review, and incident management
+                </p>
+              </div>
+              <div class="bg-slate-50 rounded-lg p-4">
+                <div class="text-green-500 mb-2 text-lg"><i class="fas fa-shield-alt"></i></div>
+                <div class="font-semibold text-slate-700 text-sm mb-1">Reliability</div>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Designed for fault isolation and recovery — failed transactions never silently corrupt state
+                </p>
+              </div>
+              <div class="bg-slate-50 rounded-lg p-4">
+                <div class="text-green-500 mb-2 text-lg"><i class="fas fa-code-branch"></i></div>
+                <div class="font-semibold text-slate-700 text-sm mb-1">CI/CD</div>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Automated pipelines with comprehensive test suites the team deployed from confidently multiple times daily
+                </p>
+              </div>
+              <div class="bg-slate-50 rounded-lg p-4">
+                <div class="text-green-500 mb-2 text-lg"><i class="fas fa-balance-scale"></i></div>
+                <div class="font-semibold text-slate-700 text-sm mb-1">Compliance</div>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Audit trails, idempotency guarantees, and data integrity constraints to meet regulatory requirements
+                </p>
+              </div>
+            </div>
+
+            <div class="border-t border-slate-100 pt-6">
+              <h4 class="font-semibold text-slate-700 mb-4">Engineering challenges</h4>
+              <ul class="space-y-3 text-slate-600 text-sm">
+                <li class="flex gap-3">
+                  <span class="text-green-400 mt-0.5 shrink-0">▸</span>
+                  Ensuring idempotency across payment flows so retries and network failures
+                  never cause duplicate charges or inconsistent ledger state
                 </li>
-                <li>
-                  <a
-                    href="https://docs.google.com/document/d/1Jb5gIhdmVQwsiqMh2R9kNU-E_GQ0W2X6PYv9KX-QC5I/edit?usp=sharing"
-                    target="_blank"
-                    class="primary-color"
-                    rel="noopener"
-                    >Get my resume</a
-                  >
+                <li class="flex gap-3">
+                  <span class="text-green-400 mt-0.5 shrink-0">▸</span>
+                  Building CI pipelines rigorous enough that engineers trusted automated tests
+                  over manual verification before every deploy
                 </li>
-                <li>
-                  <a
-                    href="mailto:treasure.kabareebe@gmail.com"
-                    target="_blank"
-                    class="primary-color"
-                    >Email Me</a
-                  >
+                <li class="flex gap-3">
+                  <span class="text-green-400 mt-0.5 shrink-0">▸</span>
+                  Maintaining comprehensive audit trails for every state transition to satisfy
+                  compliance and support internal investigations
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-green-400 mt-0.5 shrink-0">▸</span>
+                  Leading incident response under pressure — diagnosing production issues quickly
+                  while keeping stakeholders informed and minimising blast radius
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand">
-            <span class="font-weight-bold brand-logo" id="header-logo"
-              >&lt;trekab/&gt;</span
-            >
-          </a>
-          <button
-            class="navbar-toggler collapsed"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarHeader"
-            aria-controls="navbarHeader"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
-    </header>
+    </section>
 
-    <main role="main">
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="projectModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered modal-lg modal-md">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title font-weight-bold" id="modalLabel">
-                Modal title
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true"
-                  ><i class="fa fa-times-circle" aria-hidden="true"></i
-                ></span>
-              </button>
-            </div>
-            <div class="modal-body row"></div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <section class="text-center py-4">
-        <div class="container">
-          <div class="frame">
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
-          </div>
-          <div class="lead text-muted font-weight-bold quote" id="random-quote">
-          </div>
-        </div>
-      </section>
-
-      <h1 class="welcome-msg text-center py-3 font-weight-bold">
-        Featured Projects
-      </h1>
-      <div class="album py-4 projects-bg">
-        <div class="container">
-          <div class="row" id="project-cards"></div>
-        </div>
-      </div>
-    </main>
-
-    <footer class="text-muted">
-      <ul class="nav justify-content-center mb-2">
-        <li class="nav-item">
-          <a
-            class="nav-link mx-4 my-2 p-0"
-            href="https://twitter.com/t_kabareebe"
-            target="_blank"
-            rel="noopener"
-            ><i class="fab fa-twitter text-dark"></i
-          ></a>
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link mx-4 my-2 p-0"
-            href="https://www.linkedin.com/in/treasure-kabareebe/"
-            target="_blank"
-            rel="noopener"
-            ><i class="fab fa-linkedin text-dark"></i
-          ></a>
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link mx-4 my-2 p-0"
-            href="https://github.com/trekab"
-            target="_blank"
-            rel="noopener"
-            ><i class="fab fa-github text-dark"></i
-          ></a>
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link mx-4 my-2 p-0"
-            href="mailto:treasure.kabareebe@gmail.com"
-            target="_blank"
-            ><i class="far fa-envelope text-dark"></i
-          ></a>
-        </li>
-      </ul>
-      <div class="container">
-        <p class="float-right">
-          <a href="#" class="text-dark font-weight-bold">Back to top</a>
+    <!-- Infrastructure & Stack -->
+    <section id="stack" class="py-20 bg-slate-900 text-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-2">Infrastructure &amp; Stack</h2>
+        <div class="w-12 h-1 bg-blue-500 mb-4"></div>
+        <p class="text-slate-400 mb-12 max-w-2xl">
+          The tools I reach for when building and operating production systems.
         </p>
-        <p class="text-dark font-weight-bold" id="logo">&lt;trekab/&gt;</p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="bg-slate-800 rounded-lg p-5 flex items-center gap-3">
+            <i class="icon-ruby-on-rails-alt text-red-400" style="font-size:1.75rem"></i>
+            <div>
+              <div class="font-medium text-sm">Ruby on Rails</div>
+              <div class="text-slate-400 text-xs">Primary framework</div>
+            </div>
+          </div>
+          <div class="bg-slate-800 rounded-lg p-5 flex items-center gap-3">
+            <i class="icon-postgres-alt text-blue-400" style="font-size:1.75rem"></i>
+            <div>
+              <div class="font-medium text-sm">PostgreSQL</div>
+              <div class="text-slate-400 text-xs">Primary database</div>
+            </div>
+          </div>
+          <div class="bg-slate-800 rounded-lg p-5 flex items-center gap-3">
+            <i class="icon-ruby text-red-300" style="font-size:1.75rem"></i>
+            <div>
+              <div class="font-medium text-sm">Ruby</div>
+              <div class="text-slate-400 text-xs">Core language</div>
+            </div>
+          </div>
+          <div class="bg-slate-800 rounded-lg p-5 flex items-center gap-3">
+            <i class="icon-python text-yellow-400" style="font-size:1.75rem"></i>
+            <div>
+              <div class="font-medium text-sm">Python</div>
+              <div class="text-slate-400 text-xs">Scripting &amp; data</div>
+            </div>
+          </div>
+          <div class="bg-slate-800 rounded-lg p-5 flex items-center gap-3">
+            <i class="fas fa-stream text-orange-400 text-2xl"></i>
+            <div>
+              <div class="font-medium text-sm">Apache Kafka</div>
+              <div class="text-slate-400 text-xs">Event streaming</div>
+            </div>
+          </div>
+          <div class="bg-slate-800 rounded-lg p-5 flex items-center gap-3">
+            <i class="fas fa-fire text-orange-300 text-2xl"></i>
+            <div>
+              <div class="font-medium text-sm">Apache Spark</div>
+              <div class="text-slate-400 text-xs">Data processing</div>
+            </div>
+          </div>
+          <div class="bg-slate-800 rounded-lg p-5 flex items-center gap-3">
+            <i class="fas fa-layer-group text-red-400 text-2xl"></i>
+            <div>
+              <div class="font-medium text-sm">Redis / Sidekiq</div>
+              <div class="text-slate-400 text-xs">Queues &amp; caching</div>
+            </div>
+          </div>
+          <div class="bg-slate-800 rounded-lg p-5 flex items-center gap-3">
+            <i class="fab fa-docker text-blue-400 text-2xl"></i>
+            <div>
+              <div class="font-medium text-sm">Docker</div>
+              <div class="text-slate-400 text-xs">Containerisation</div>
+            </div>
+          </div>
+          <div class="bg-slate-800 rounded-lg p-5 flex items-center gap-3">
+            <i class="fas fa-code-branch text-green-400 text-2xl"></i>
+            <div>
+              <div class="font-medium text-sm">CI/CD</div>
+              <div class="text-slate-400 text-xs">Automated pipelines</div>
+            </div>
+          </div>
+          <div class="bg-slate-800 rounded-lg p-5 flex items-center gap-3">
+            <i class="fas fa-chart-line text-purple-400 text-2xl"></i>
+            <div>
+              <div class="font-medium text-sm">Observability</div>
+              <div class="text-slate-400 text-xs">Metrics &amp; alerting</div>
+            </div>
+          </div>
+          <div class="bg-slate-800 rounded-lg p-5 flex items-center gap-3">
+            <i class="fab fa-linux text-slate-200 text-2xl"></i>
+            <div>
+              <div class="font-medium text-sm">Linux</div>
+              <div class="text-slate-400 text-xs">Server ops</div>
+            </div>
+          </div>
+          <div class="bg-slate-800 rounded-lg p-5 flex items-center gap-3">
+            <i class="icon-git text-orange-500" style="font-size:1.75rem"></i>
+            <div>
+              <div class="font-medium text-sm">Git</div>
+              <div class="text-slate-400 text-xs">Version control</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Writing -->
+    <section id="writing" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-2">Writing</h2>
+        <div class="w-12 h-1 bg-blue-600 mb-4"></div>
+        <p class="text-slate-500 mb-12 max-w-2xl">
+          Technical articles on Rails, PostgreSQL, data engineering, and production operations.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <a
+            href="https://hackernoon.com/u/trekab"
+            target="_blank"
+            rel="noopener"
+            class="group block bg-slate-50 hover:bg-blue-50 border border-slate-100 hover:border-blue-200 rounded-xl p-6 transition-all"
+          >
+            <div class="flex items-start justify-between mb-3">
+              <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Hackernoon</span>
+              <i class="fas fa-external-link-alt text-slate-300 group-hover:text-blue-400 text-sm transition-colors"></i>
+            </div>
+            <h3 class="font-semibold text-slate-800 mb-2">Articles on Hackernoon</h3>
+            <p class="text-slate-500 text-sm">
+              Technical writing covering backend engineering, Rails patterns, and lessons from production systems.
+            </p>
+          </a>
+
+          <div class="bg-slate-50 border border-dashed border-slate-200 rounded-xl p-6 flex flex-col justify-center items-center text-center gap-3">
+            <i class="fas fa-pencil-alt text-slate-300 text-2xl"></i>
+            <p class="text-slate-400 text-sm">
+              More articles in progress — PostgreSQL optimisation, Dockerising Rails, and debugging production incidents.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-2">Get in Touch</h2>
+        <div class="w-12 h-1 bg-blue-600 mb-10"></div>
+        <div class="max-w-xl">
+          <p class="text-slate-600 mb-8 leading-relaxed">
+            Open to senior backend and platform engineering roles, consulting engagements,
+            and technical conversations. Drop me a message.
+          </p>
+          <div class="space-y-4">
+            <a
+              href="mailto:treasure.kabareebe@gmail.com"
+              class="flex items-center gap-3 text-slate-700 hover:text-blue-600 transition-colors group"
+            >
+              <div class="w-10 h-10 bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:shadow-md transition-shadow">
+                <i class="far fa-envelope text-blue-500"></i>
+              </div>
+              <span class="font-medium">treasure.kabareebe@gmail.com</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/treasure-kabareebe/"
+              target="_blank"
+              rel="noopener"
+              class="flex items-center gap-3 text-slate-700 hover:text-blue-600 transition-colors group"
+            >
+              <div class="w-10 h-10 bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:shadow-md transition-shadow">
+                <i class="fab fa-linkedin text-blue-600"></i>
+              </div>
+              <span class="font-medium">LinkedIn</span>
+            </a>
+            <a
+              href="https://github.com/trekab"
+              target="_blank"
+              rel="noopener"
+              class="flex items-center gap-3 text-slate-700 hover:text-blue-600 transition-colors group"
+            >
+              <div class="w-10 h-10 bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:shadow-md transition-shadow">
+                <i class="fab fa-github text-slate-700"></i>
+              </div>
+              <span class="font-medium">GitHub — trekab</span>
+            </a>
+            <a
+              href="https://twitter.com/t_kabareebe"
+              target="_blank"
+              rel="noopener"
+              class="flex items-center gap-3 text-slate-700 hover:text-blue-600 transition-colors group"
+            >
+              <div class="w-10 h-10 bg-white rounded-lg shadow-sm flex items-center justify-center group-hover:shadow-md transition-shadow">
+                <i class="fab fa-twitter text-blue-400"></i>
+              </div>
+              <span class="font-medium">X / Twitter</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between flex-wrap gap-4">
+          <span class="font-mono text-slate-300 text-sm">&lt;trekab/&gt;</span>
+          <div class="flex gap-6 text-lg">
+            <a href="https://github.com/trekab" target="_blank" rel="noopener" class="hover:text-white transition-colors"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/treasure-kabareebe/" target="_blank" rel="noopener" class="hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/t_kabareebe" target="_blank" rel="noopener" class="hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:treasure.kabareebe@gmail.com" class="hover:text-white transition-colors"><i class="far fa-envelope"></i></a>
+          </div>
+        </div>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script type="module" src="js/script.js"></script>
+
+    <script>
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+      menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => menu.classList.add("hidden")));
+    </script>
   </body>
 </html>
