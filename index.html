@@ -373,6 +373,94 @@
             </div>
           </div>
         </div>
+
+        <!-- Robo-Advisory Platform -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-100 mt-8 overflow-hidden">
+          <div class="p-8">
+            <div class="flex items-start justify-between flex-wrap gap-4 mb-6">
+              <div>
+                <span class="text-xs font-semibold text-violet-600 uppercase tracking-wider">Fintech / Investment Platform</span>
+                <h3 class="text-2xl font-bold mt-1">Robo-Advisory Platform</h3>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-medium">Ruby on Rails</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-medium">PostgreSQL</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-medium">AWS</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-medium">Packwerk</span>
+                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded font-medium">RSpec</span>
+              </div>
+            </div>
+
+            <p class="text-slate-600 mb-8 leading-relaxed">
+              German investment platform offering clients visibility into and control over their
+              ETF portfolios. Contributed to the client-facing Rails application across portfolio
+              management, infrastructure migration to AWS, and an architectural shift toward a
+              modular monolith — operating within a regulated European financial environment with
+              strict requirements around data accuracy, auditability, and client trust.
+            </p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+              <div class="bg-slate-50 rounded-lg p-4">
+                <div class="text-violet-500 mb-2 text-lg"><i class="fas fa-chart-pie"></i></div>
+                <div class="font-semibold text-slate-700 text-sm mb-1">Portfolio Management</div>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Built portfolio rebalancing logic and a portfolio performance API requiring
+                  precise financial calculations and data accuracy
+                </p>
+              </div>
+              <div class="bg-slate-50 rounded-lg p-4">
+                <div class="text-violet-500 mb-2 text-lg"><i class="fas fa-chart-line"></i></div>
+                <div class="font-semibold text-slate-700 text-sm mb-1">Observability</div>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Drove comprehensive logging implementation as part of the AWS infrastructure
+                  migration team, improving production visibility in the new environment
+                </p>
+              </div>
+              <div class="bg-slate-50 rounded-lg p-4">
+                <div class="text-violet-500 mb-2 text-lg"><i class="fas fa-user-circle"></i></div>
+                <div class="font-semibold text-slate-700 text-sm mb-1">Client Experience</div>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Developed user management features and integrated Trustpilot to surface
+                  and manage client reviews within the platform
+                </p>
+              </div>
+              <div class="bg-slate-50 rounded-lg p-4">
+                <div class="text-violet-500 mb-2 text-lg"><i class="fas fa-cubes"></i></div>
+                <div class="font-semibold text-slate-700 text-sm mb-1">Architecture</div>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Part of the team beginning a Packwerk-driven modular monolith transition
+                  to enforce package boundaries and improve long-term maintainability
+                </p>
+              </div>
+            </div>
+
+            <div class="border-t border-slate-100 pt-6">
+              <h4 class="font-semibold text-slate-700 mb-4">Engineering challenges</h4>
+              <ul class="space-y-3 text-slate-600 text-sm">
+                <li class="flex gap-3">
+                  <span class="text-violet-400 mt-0.5 shrink-0">▸</span>
+                  Implementing portfolio rebalancing with the correctness guarantees a regulated
+                  investment product demands — wrong calculations have direct financial consequences for clients
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-violet-400 mt-0.5 shrink-0">▸</span>
+                  Building the portfolio performance API to return accurate, consistent results
+                  across different time horizons and portfolio compositions
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-violet-400 mt-0.5 shrink-0">▸</span>
+                  Establishing structured logging during the AWS migration to give the team
+                  meaningful production visibility without disrupting ongoing delivery
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-violet-400 mt-0.5 shrink-0">▸</span>
+                  Navigating a Packwerk modular monolith migration — enforcing package boundaries
+                  in a large Rails codebase while keeping feature work moving
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
